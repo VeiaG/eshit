@@ -85,7 +85,7 @@ video {
   gap: 8px;
   position: relative;
 }
-@media (width <= 800px) {
+@media (max-width: 800px) {
   .cabin-block .cabin {
     grid-template-columns: 1fr 1fr;
   }
@@ -153,7 +153,7 @@ video {
   gap: 16px;
   position: relative;
 }
-@media (width <= 800px) {
+@media (max-width: 800px) {
   .service-block .service {
     grid-template-columns: 1fr;
   }
@@ -194,7 +194,7 @@ video {
   font-weight: 300;
   font-style: normal;
 }
-@media (width <= 800px) {
+@media (max-width: 800px) {
   .footer-block h1 {
     font-size: 48px;
   }
