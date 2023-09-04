@@ -194,6 +194,11 @@ video {
   font-weight: 300;
   font-style: normal;
 }
+@media (width <= 800px) {
+  .footer-block h1 {
+    font-size: 48px;
+  }
+}
 .footer-block p {
   margin: 8px;
   font-size: 20px;

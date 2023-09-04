@@ -201,6 +201,9 @@ video {
         font-family: 'e-Ukraine Head';
         font-weight: 300;
         font-style: normal;
+        @media (width<=800px){
+            font-size:48px;
+        }
     }
     p{
         margin:8px;
