@@ -47,13 +47,21 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   gap: 8px;
+  transition: scale 0.3s ease-in-out;
 }
 .logo img {
   flex-grow: 0;
   flex-shrink: 0;
   width: 128px;
   aspect-ratio: 1;
+}
+.logo:hover {
+  scale: 1.05;
 }
 
 .cabin-block {
@@ -117,7 +125,7 @@ video {
 .text-block__content p {
   margin: 8px;
   font-size: 20px;
-  font-family: "e-Ukraine Head";
+  font-family: "e-Ukraine";
   font-weight: 300;
   font-style: normal;
 }
@@ -136,11 +144,13 @@ video {
   font-style: normal;
 }
 .ad-block .ad {
+  padding: 32px;
+  background: #ECEAEC;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1280px;
   margin-inline: auto;
-  gap: 8px;
+  gap: 16px;
   position: relative;
 }
 @media (width <= 800px) {
@@ -149,14 +159,64 @@ video {
   }
 }
 .ad-block .ad__item {
-  background: #ECEAEC;
-  padding: 32px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
+  transition: scale 0.3s ease-in-out;
+  position: relative;
 }
+.ad-block .ad__item:hover {
+  scale: 1.05;
+}
+.ad-block .ad__item img {
+  width: 100%;
+}
+
+.footer-block {
+  position: relative;
+  background: black;
+  width: 100%;
+  padding: 32px 8px;
+  color: white;
+}
+.footer-block__content {
+  max-width: 1280px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 48px;
+}
+.footer-block .block {
+  width: 70%;
+}
+.footer-block h1 {
+  font-size: 60px;
+  font-family: "e-Ukraine Head";
+  font-weight: 300;
+  font-style: normal;
+}
+.footer-block p {
+  margin: 8px;
+  font-size: 20px;
+  font-family: "e-Ukraine";
+  font-weight: 300;
+  font-style: normal;
+}
+.footer-block li {
+  margin: 8px;
+  font-size: 20px;
+  font-family: "e-Ukraine";
+  font-weight: 300;
+  font-style: normal;
+}
+.footer-block .right {
+  text-align: right;
+  align-self: flex-end;
+}
+.footer-block .center {
+  text-align: center;
+  align-self: center;
+}
+
 .error {
   padding: 8px;
   background: #FF3800;

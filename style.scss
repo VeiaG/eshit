@@ -2,6 +2,13 @@
 *{
     box-sizing: border-box;
 }
+
+@mixin hoverAnim{
+    transition: scale 0.3s ease-in-out;
+    &:hover{
+        scale:1.05;
+    }
+}
 body{
    margin:0;
    font-family: 'e-Ukraine';
@@ -50,6 +57,8 @@ video {
     justify-content: space-between;
     align-items: center;
 
+    cursor: default;
+    user-select: none;
     gap:8px;
     img{
         flex-grow:0;
@@ -57,6 +66,8 @@ video {
         width:128px;
         aspect-ratio: 1;
     }
+
+    @include hoverAnim;
 }
 .cabin-block{
     position: relative;
@@ -121,7 +132,7 @@ video {
         p{
             margin:8px;
             font-size:20px;
-            font-family: 'e-Ukraine Head';
+            font-family: 'e-Ukraine';
             font-weight: 300;
             font-style: normal;
         }
@@ -141,6 +152,8 @@ video {
         font-style: normal;
     }
     .ad{
+        padding:32px;
+        background: #ECEAEC;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         @media (width<=800px){
@@ -148,28 +161,70 @@ video {
         }
         max-width: 1280px;
         margin-inline: auto;
-        gap:8px;
+        gap:16px;
         
         position: relative;
         &__item{
-            background: #ECEAEC;
-            
-            padding:32px 16px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap:32px;
-
+            @include hoverAnim;
+            position: relative;
             img{
-                
+                width:100%;
             }
         }
     }
     
 }
+.footer-block{
+    position: relative;
+    background:black;
+    width: 100%;
+    padding:32px 8px;
+    color:white;
 
+   
+
+    &__content{
+        max-width: 1280px;
+        margin-inline: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap:48px;
+    }
+    .block{
+        width:70%;
+    }
+    h1{
+        font-size:60px;
+        font-family: 'e-Ukraine Head';
+        font-weight: 300;
+        font-style: normal;
+    }
+    p{
+        margin:8px;
+        font-size:20px;
+        font-family: 'e-Ukraine';
+        font-weight: 300;
+        font-style: normal;
+    }
+    li{
+        margin:8px;
+        font-size:20px;
+        font-family: 'e-Ukraine';
+        font-weight: 300;
+        font-style: normal;
+    }
+    .right{
+        text-align: right;
+        align-self: flex-end;
+    }
+    .center{
+        text-align: center;
+        align-self: center;
+    }
+}
 .error{
     padding:8px;
     background:#FF3800;
