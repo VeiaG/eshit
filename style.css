@@ -28,6 +28,8 @@ video {
 
 .first-block {
   position: relative;
+  background: url("./images/diia_gradient_02.png");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
