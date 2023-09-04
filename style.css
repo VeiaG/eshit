@@ -130,20 +130,20 @@ video {
   font-style: normal;
 }
 
-.ad-block {
+.service-block {
   position: relative;
   background: white;
   width: 100%;
   padding: 0px 8px 32px;
 }
-.ad-block h2 {
+.service-block h2 {
   text-align: center;
   font-size: 48px;
   font-family: "e-Ukraine Head";
   font-weight: normal;
   font-style: normal;
 }
-.ad-block .ad {
+.service-block .service {
   padding: 32px;
   background: #ECEAEC;
   display: grid;
@@ -154,18 +154,18 @@ video {
   position: relative;
 }
 @media (width <= 800px) {
-  .ad-block .ad {
+  .service-block .service {
     grid-template-columns: 1fr;
   }
 }
-.ad-block .ad__item {
+.service-block .service__item {
   transition: scale 0.3s ease-in-out;
   position: relative;
 }
-.ad-block .ad__item:hover {
+.service-block .service__item:hover {
   scale: 1.05;
 }
-.ad-block .ad__item img {
+.service-block .service__item img {
   width: 100%;
 }
 
