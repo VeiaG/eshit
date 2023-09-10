@@ -1,3 +1,4 @@
+
 [
     {
         "state": "error"
@@ -6,7 +7,7 @@
         "state": "error"
     },
     {
-        "state": "working"
+        "state": "warning"
     },
     {
         "state": "warning"
